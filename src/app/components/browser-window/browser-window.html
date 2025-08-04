@@ -1,0 +1,57 @@
+<div class="window-toolbar">
+  <div class="window-icons">
+    <div class="icon close"></div>
+    <div class="icon minimize"></div>
+    <div class="icon expand"></div>
+  </div>
+</div>
+<div class="browser-toolbar">
+  <div class="arrows">
+    <span>←</span>
+    <span>→</span>
+  </div>
+  <div class="url-bar" [class.url-bar-explanation]="showExplanations">
+    <span class="url">https://my-app.com/users/123</span>
+    <span class="refresh-icon">⟳</span>
+    @if(showExplanations) {
+    <div class="explanation-arrow">
+      <div class="left-side"></div>
+      <div class="right-side"></div>
+    </div>
+    }
+  </div>
+</div>
+@if (showExplanations) {
+<div class="explanations">
+  <!-- <curly-brace-icon
+    style="stroke: var(--token-boolean-number-function)"
+  ></curly-brace-icon> -->
+  <p>
+    The URL is a source of truth &lpar;and a source of data&rpar; for your
+    component.
+  </p>
+</div>
+}
+<div class="viewport">
+  <div class="header-pic">
+    <avatar-icon></avatar-icon>
+  </div>
+  <div class="body">
+    <div class="left">
+      <div class="skeleton name"></div>
+      <div class="skeleton email mb-6"></div>
+      @for (_ of [0,0,0,0]; track $index) {
+      <div class="icon-and-span">
+        <div class="skeleton icon"></div>
+        <div class="skeleton span"></div>
+      </div>
+      }
+    </div>
+    <div class="right">
+      <div class="skeleton post"></div>
+      <div class="skeleton post"></div>
+    </div>
+  </div>
+</div>
+
+<ng-content></ng-content>

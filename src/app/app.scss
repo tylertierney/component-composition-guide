@@ -1,0 +1,69 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  counter-reset: someCounter;
+
+  app-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  main {
+    display: flex;
+
+    .right,
+    .left {
+      width: 50%;
+      display: flex;
+    }
+
+    .left {
+      background-color: var(--code-bg-color);
+      flex-direction: column;
+    }
+
+    .pane {
+      min-height: var(--screen-height);
+    }
+
+    .right {
+      padding: 2rem 2rem 2rem 0;
+      position: relative;
+      display: flex;
+
+      .scroller-track {
+        position: relative;
+        height: 100%;
+        width: 4px;
+        margin: 0 2rem 0 0.25rem;
+        display: flex;
+
+        .scroller {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          border-radius: 6px;
+          width: 4px;
+          background-color: var(--text-color);
+          transition: 0.3s ease-in-out;
+          opacity: 0.2;
+        }
+      }
+
+      .inner {
+        display: flex;
+        flex-direction: column;
+
+        section:not(:first-child) {
+          margin-bottom: var(--screen-height);
+        }
+
+        p {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

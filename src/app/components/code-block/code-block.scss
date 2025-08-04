@@ -1,0 +1,38 @@
+:host {
+  pre {
+    padding: 1rem 1rem 1rem 0.5rem;
+    overflow-x: hidden;
+
+    button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      button {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.pleaseAnimateThis {
+  animation-name: pleaseAnimateThis;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes pleaseAnimateThis {
+  from {
+    opacity: 0;
+    // left: 100%;
+  }
+  to {
+    opacity: 1;
+    // left: 0%;
+  }
+}

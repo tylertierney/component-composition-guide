@@ -27,7 +27,9 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/prism-custom.css",
+              "src/styles.scss",
+              "src/styles.css"
             ]
           },
           "configurations": {
@@ -80,9 +82,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ]
+            "styles": ["src/styles.scss"]
           }
         }
       }

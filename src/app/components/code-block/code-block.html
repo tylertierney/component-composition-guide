@@ -1,0 +1,21 @@
+<pre
+  style="display: flex; flex-direction: column; position: relative"
+  class="language-typescript"
+>
+  <code
+    style="transition: 1s ease-in-out"
+    *ngFor="let idk of htmlStrings(); let i = index"
+    [class.pleaseAnimateThis]="idk.animate"
+    class="language-typescript"
+    [innerHTML]="idk.str"
+  >
+  </code>
+  <button
+    style="position: absolute; top: 0; right: 0"
+    app-button
+    type="ghost"
+    (click)="copyToClipboard()"
+  >
+    <copy-icon></copy-icon>
+  </button>
+</pre>

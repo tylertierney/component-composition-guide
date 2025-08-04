@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  --navbar-height: 3.5rem;
+  --screen-height: calc(100vh - var(--navbar-height));
+  --half-screen-height: calc(var(--screen-height) / 2);
+
+  --bg-color: #f9fbfa;
+  --text-color: #5a5a5a;
+  --code-bg-color: #eeeeee;
+
+  --token-tag-namespace-attrName-deleted: #c94348;
+  --token-boolean-number-function: #c94348;
+  --token-operator-entity-url: #067a78;
+  --token-string-char-attrValue-regex-variable: #308b10;
+  --token-property-className-constant-symbol: #2b61b3;
+  --token-selector-important-atrule-keyword-builtin: #8e1190;
+
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+
+  browser-window {
+    --window-background: #d7d7d7;
+    --window-toolbar: #e9eef3;
+    --browser-toolbar: #c8d4df;
+    --url-bar: #e2e7ec;
+    --toolbar-border: lightgray;
+  }
+
+  p {
+    max-width: 66ch;
+  }
+
+  code {
+    background-color: color-mix(in hsl, var(--text-color) 20%, transparent);
+    padding: 0.1rem 0.2rem;
+    border-radius: 4px;
+  }
+}
+
+body.dark-theme {
+  --bg-color: #2b2939;
+  --text-color: #f8f8f8;
+  --code-bg-color: #171717;
+
+  --token-tag-namespace-attrName-deleted: #e2777a;
+  --token-boolean-number-function: #e2777a;
+  --token-operator-entity-url: #67cdcc;
+  --token-string-char-attrValue-regex-variable: #f1f19f;
+  --token-property-className-constant-symbol: #8cec87;
+  --token-selector-important-atrule-keyword-builtin: #cc99cd;
+
+  browser-window {
+    --window-background: #2f3e4b;
+    --window-toolbar: #3d5365;
+    --browser-toolbar: #2e4252;
+    --url-bar: #1e2c37;
+    --toolbar-border: #303030;
+  }
+}
+
+body pre.line-numbers.language-typescript {
+  padding: 1rem 0 1rem 1.2rem;
+}
